@@ -1,0 +1,22 @@
+##################################################
+# Directories
+##################################################
+HOME=@abs_builddir@
+
+BOOST_ROOT=$(HOME)/../depend/boost
+AIN_ROOT=$(HOME)
+
+INSTALL_DIR=$(HOME)/../ain
+##################################################
+# Compiler Settings
+##################################################
+CXX=@CXX@
+CXX_FLAG=-D_AIN_DEBUG -fPIC -O2 -std=c++11
+LNK_FLAG=-shared
+
+INC=-I$(BOOST_ROOT)/include -I$(AIN_ROOT)/include
+LIB=-L$(BOOST_ROOT)/lib -lboost_system
+
+##################################################
+# Installer Settings
+##################################################
